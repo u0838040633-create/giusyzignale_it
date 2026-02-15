@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dott.ssa Giusy Zignale | Ostetrica e Specialista Riabilitazione Pelvica</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABILI COLORE --- */
+        :root {
+            --primary: #6b8e23; 
+            --secondary: #d4a373; 
+            --accent: #f4f1de; 
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --white: #ffffff;
+            --soft-pink: #faedcd;
+        }
+
+        /* --- RESET E BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-main);
+            line-height: 1.8;
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; }
+        section { padding: 100px 10%; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* --- NAVBAR --- */
+        nav {
+            background-color: rgba(255, 255, 255, 0.98);
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 9999;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        .logo-area span.name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+        .logo-area span.subtitle {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-light);
+            display: block;
+        }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 35px; }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+        .nav-cta {
+            background-color: var(--primary);
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 50px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero-content h1 { font-size: 3.5rem; color: var(--text-main); margin-bottom: 20px; }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 30px; }
+
+        /* --- INFO & CARDS --- */
+        .stats { background-color: var(--accent); display: flex; justify-content: space-around; padding: 50px 10%; text-align: center; }
+        .stat-item h3 { font-size: 2.5rem; color: var(--primary); }
+        
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-img img { width: 100%; border-radius: 20px; box-shadow: 20px 20px 0 var(--soft-pink); }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { padding: 40px; border-radius: 20px; border: 1px solid #eee; background: white; transition: 0.4s; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary); }
+
+        /* --- SPECIALE PELVICO --- */
+        .pelvic-special { background-color: #2d3436; color: white; padding: 80px 10%; }
+        .tag { background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; border: 1px solid var(--primary); margin-right: 5px; display: inline-block; margin-top: 10px; }
+
+        /* --- CONTATTI --- */
+        .contact-section { background-color: var(--accent); text-align: center; }
+        .phone-display { font-size: 3rem; color: var(--primary); text-decoration: none; font-weight: 700; display: block; margin: 20px 0; }
+
+        /* --- FOOTER --- */
+        footer { background: #1a1a1a; color: white; padding: 60px 10% 20px; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.8rem; color: #777; margin-top: 40px; }
+        .creator { color: var(--secondary); font-weight: 600; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            nav ul { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <span class="name">Dott.ssa Giusy Zignale</span>
+            <span class="subtitle">Ostetrica Specializzata</span>
+        </div>
+        <ul>
+            <li><a href="#profilo">Profilo</a></li>
+            <li><a href="#servizi">Servizi</a></li>
+            <li><a href="#pavimento-pelvico">Pavimento Pelvico</a></li>
+            <li><a href="#contatti" class="nav-cta">Contattami</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Assistenza Ostetrica con la Dott.ssa Giusy Zignale</h1>
+            <p>Salute, Movimento e Benessere per la Donna a domicilio.</p>
+            <a href="tel:3207542197" class="btn-cta" style="background: var(--primary); color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold;">CHIAMA ORA</a>
+        </div>
+    </section>
+
+    <div class="stats">
+        <div class="stat-item"><h3>25</h3><p>Anni di Esperienza</p></div>
+        <div class="stat-item"><h3>2</h3><p>Lauree</p></div>
+        <div class="stat-item"><h3>320+</h3><p>Famiglie Assistite</p></div>
+    </div>
+
+    <section id="profilo" class="container">
+        <div class="about-grid">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Giusy Zignale">
+            </div>
+            <div class="about-text">
+                <h2>Chi è Giusy Zignale</h2>
+                <p>Sono un'ostetrica con una visione a 360 gradi della salute femminile. Grazie alla mia doppia formazione, unisco la clinica ostetrica alla scienza del movimento.</p>
+                <ul style="list-style: none; margin-top: 20px;">
+                    <li><i class="fas fa-graduation-cap" style="color: var(--primary);"></i> <strong>Laurea in Ostetricia</strong></li>
+                    <li><i class="fas fa-running" style="color: var(--primary);"></i> <strong>Laurea in Scienze Motorie</strong></li>
+                    <li><i class="fas fa-history" style="color: var(--primary);"></i> <strong>25 Anni di Esperienza sul campo</strong></li>
+                </ul>
+                <p style="margin-top: 20px;">La mia missione è accompagnare le donne nel periodo del post-partum e aiutarle a ritrovare il proprio equilibrio fisico.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servizi" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">I Miei Servizi a Domicilio</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <i class="fas fa-baby" style="font-size: 2rem; color: var(--secondary);"></i>
+                    <h3>Post-Partum</h3>
+                    <p>Assistenza clinica per mamma e neonato direttamente nel calore della vostra casa.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-hand-holding-heart" style="font-size: 2rem; color: var(--secondary);"></i>
+                    <h3>Allattamento</h3>
+                    <p>Consulenze specialistiche per avviare e gestire l'allattamento senza stress.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-female" style="font-size: 2rem; color: var(--secondary);"></i>
+                    <h3>Riabilitazione Pelvica</h3>
+                    <p>Corsi e trattamenti mirati per il recupero della tonicità del pavimento pelvico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pavimento-pelvico" class="pelvic-special">
+        <div class="container">
+            <h2>Specializzazione Pavimento Pelvico</h2>
+            <p>L'unione della laurea in <strong>Scienze Motorie</strong> con quella in <strong>Ostetricia</strong> mi permette di offrire protocolli riabilitativi unici, basati su corsi avanzati e anni di pratica.</p>
+            <div>
+                <span class="tag">Recupero Diastasi</span>
+                <span class="tag">Incontinenza</span>
+                <span class="tag">Ginnastica Ipopressiva</span>
+                <span class="tag">Rinforzo Muscolare</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti" class="contact-section">
+        <div class="container">
+            <h2>Contatta la Dott.ssa Giusy Zignale</h2>
+            <p>Disponibile per visite domiciliari e consulenze urgenti.</p>
+            <a href="tel:3207542197" class="phone-display">320 7542197</a>
+            <p><i class="fab fa-whatsapp"></i> Disponibile anche su WhatsApp</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>Dott.ssa Giusy Zignale</strong> - Ostetrica & Laureata in Scienze Motorie</p>
+            <p>25 anni di esperienza al servizio delle donne.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tutti i diritti riservati.</p>
+                <p>Sito web creato con cura da <a href="#" class="creator">Michele Schillaci</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+      </html>
+      
